@@ -6,7 +6,7 @@ code to modern standards (HTML5).  The output is finally pretty-printed with a
 correct indentation.
 
 Please don't use this plugin in production if you haven't set up proper caching
-first, as HTML Tidy is very resource intesive.
+first, as HTML Tidy is very resource intensive.
 
 ## Requirements
 
