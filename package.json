@@ -1,0 +1,25 @@
+{
+  "name": "taidi",
+  "version": "0.0.1",
+  "description": "HTML Tidy plugin for WordPress",
+  "main": "gulpfile.js",
+  "scripts": {
+    "docker": "docker build . -f Dockerfile-wordpress -t wordpress:taidi-dev && docker stack deploy -c docker-stack.yml taidi-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarijokinen/taidi.git"
+  },
+  "author": "Jari Jokinen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarijokinen/taidi/issues"
+  },
+  "homepage": "https://github.com/jarijokinen/taidi#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-zip": "^5.0.1"
+  }
+}

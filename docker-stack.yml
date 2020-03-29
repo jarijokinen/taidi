@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+  wp:
+    image: wordpress:taidi-dev
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wp
+      WORDPRESS_DB_USER: wp
+      WORDPRESS_DB_PASSWORD: wp
+    volumes:
+      - ./src:/var/www/html/wp-content/plugins/taidi
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wp
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: wp
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db_taidi_dev:/var/lib/mysql
+volumes:
+  db_taidi_dev:
